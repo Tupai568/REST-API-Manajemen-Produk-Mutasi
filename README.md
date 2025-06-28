@@ -39,8 +39,8 @@ digunakan untuk mengelola data produk. Operasi CRUD (Create, Read, Update, Delet
 
 ### Tambah Produk
 memungkinkan pengguna untuk menambahkan produk baru ke sistem
-Method: POST
-URL: http://127.0.0.1:8000/api/produk
+- Method: POST
+- URL: http://127.0.0.1:8000/api/produk
 Example Request Body:
 ```
 {
@@ -48,6 +48,24 @@ Example Request Body:
   "kode_produk": "aym1",
   "kategori": "Peternakan",
   "satuan": "ekor"
+}
+```
+
+Example Response 
+```
+{
+    "success": true,
+    "message": "Produk berhasil ditambahkan",
+    "data": {
+        "nama_produk": "Ayam Super mangon",
+        "kode_produk": "aym8",
+        "kategori": "Peternakan",
+        "satuan": "ekor",
+        "updated_at": "2025-06-27T19:47:21.000000Z",
+        "created_at": "2025-06-27T19:47:21.000000Z",
+        "id": 14
+    },
+    "timestamp": "2025-06-27 19:47:21"
 }
 ```
 
