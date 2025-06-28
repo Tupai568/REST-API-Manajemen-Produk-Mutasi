@@ -32,10 +32,29 @@ Kemudian, gunakan token sebagai Bearer Token:
 Content-Type: application/json
 Authorization: Bearer your_token_here
 ```
+# Login
+untuk melakukan autentikasi dan masuk ke dalam aplikasi dengan memberikan kredensial mereka. Setelah autentikasi berhasil, server akan merespons dengan objek pengguna dan token autentikasi.
+- Method: POST
+- URL: http://127.0.0.1:8000/api/login
+Example Request Body:
+```
+{
+  "email": "user@example.com",
+  "password": "your_password"
+}
+```
 
 # Produk
 
 digunakan untuk mengelola data produk. Operasi CRUD (Create, Read, Update, Delete) tersedia sepenuhnya dan dilindungi oleh otentikasi token.
+
+### Lihat Semua Produk
+- Method: GET
+- URL: http://127.0.0.1:8000/api/produk
+
+### Lihat Produk Sesuai Id
+- Method: GET
+- URL: http://127.0.0.1:8000/api/produk/{id}
 
 ### Tambah Produk
 memungkinkan pengguna untuk menambahkan produk baru ke sistem
