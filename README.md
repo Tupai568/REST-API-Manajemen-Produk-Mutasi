@@ -23,7 +23,22 @@ REST API ini dirancang untuk menjadi antarmuka backend dari sistem Manajemen Pro
 semua endpoint dilindungi dan hanya dapat diakses setelah proses login berhasil. Setelah login, sistem akan memberikan
 
 ```
-POST /api/login
+{
+  "success": true,
+  "message": "",
+  "data": {
+    "user": {
+      "id": 1,
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "email_verified_at": null,
+      "created_at": "2023-01-01T00:00:00Z",
+      "updated_at": "2023-01-01T00:00:00Z"
+    },
+    "token": "your_auth_token"
+  },
+  "timestamp": "2023-01-01T00:00:00Z"
+}
 ```
 
 Kemudian, gunakan token sebagai Bearer Token:
