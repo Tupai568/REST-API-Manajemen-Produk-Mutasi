@@ -37,13 +37,10 @@ Authorization: Bearer your_token_here
 
 digunakan untuk mengelola data produk. Operasi CRUD (Create, Read, Update, Delete) tersedia sepenuhnya dan dilindungi oleh otentikasi token.
 
-###### Tambah Produk
+### Tambah Produk
 memungkinkan pengguna untuk menambahkan produk baru ke sistem
-
 Method: POST
-
 URL: http://127.0.0.1:8000/api/produk
-
 Example Request Body:
 ```
 {
