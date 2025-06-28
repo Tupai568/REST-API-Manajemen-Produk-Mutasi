@@ -55,7 +55,7 @@ digunakan untuk mengelola data produk. Operasi CRUD (Create, Read, Update, Delet
 - Method: GET
 - URL: http://127.0.0.1:8000/api/produk
 
-###* Lihat Produk Sesuai Id
+### Lihat Produk Sesuai Id
 - Method: GET
 - URL: http://127.0.0.1:8000/api/produk/{id}
 
@@ -92,8 +92,8 @@ Example Response
 ```
 #### Update Produk
 memungkinkan pengguna untuk mengupdate produk
--Method: PUT
--URL: http://127.0.0.1:8000/api/produk/{id}
+- Method: PUT
+- URL: http://127.0.0.1:8000/api/produk/{id}
 Example Request Body:
 ```
 {
@@ -105,8 +105,8 @@ Example Request Body:
 ```
 #### Delete Produk
 memungkinkan pengguna untuk menghapus produk
--Method: DELETE
--URL: http://127.0.0.1:8000/api/produk/{id}
+- Method: DELETE
+- URL: http://127.0.0.1:8000/api/produk/{id}
 
 
 ### Cara Menjalankan
