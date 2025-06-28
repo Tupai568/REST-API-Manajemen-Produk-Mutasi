@@ -186,37 +186,43 @@ Example Request Body:
 # Mutasi
 digunakan untuk mengambil data mutasi yang ada, termasuk detail tentang lokasi pengguna dan produk yang terkait dengan setiap mutasi..
 
-### Lihat data ProdukLokasi
+### Lihat data Mutasi
 - Method: GET
-- URL: http://127.0.0.1:8000/produk-lokasi
+- URL: http://127.0.0.1:8000/mutasi
 
-### Lihat data ProdukLokasi dengan ID
+### Lihat data Mutasi dengan ID
 - Method: GET
-- URL: http://127.0.0.1:8000/api/produk-lokasi{id}
+- URL: http://127.0.0.1:8000/api/mutasi{id}
 
-### Tanbah data ProdukLokasi
+### Tambah data Mutasi
 memungkinkan pengguna untuk menambahkan Data baru ke sistem
 - Method: POST
-- URL: http://127.0.0.1:8000/api/produk-lokasi
+- URL: http://127.0.0.1:8000/api/mutasi
 
 Example Request Body:
 ```
 {
-  "produk_id": 3,
-  "lokasi_id": 7,
-  "stok": 50
+  "tanggal": "2025-06-27",
+  "jenis_mutasi": "masuk",
+  "jumlah": 20,
+  "keterangan": "Barang Masuk",
+  "produk_lokasi_id": 6
 }
 ```
 
-### Update data ProdukLokasi
+### Update data Mutasi
 memungkinkan pengguna untuk mengupdate data
 - Method: PUT
-- URL: http://127.0.0.1:8000/api/lokasi{id}
+- URL: http://127.0.0.1:8000/api/mutasi{id}
 
 Example Request Body:
 ```
 {
-  "stok": 50
+  "tanggal": "2025-06-27",
+  "jenis_mutasi": "keluar",
+  "jumlah": 20,
+  "keterangan": "Barang Masuk",
+  "produk_lokasi_id": 6
 }
 ```
 
