@@ -38,6 +38,7 @@ Authorization: Bearer your_token_here
 untuk melakukan autentikasi dan masuk ke dalam aplikasi dengan memberikan kredensial mereka. Setelah autentikasi berhasil, server akan merespons dengan objek pengguna dan token autentikasi.
 - Method: POST
 - URL: http://127.0.0.1:8000/api/login
+  
 Example Request Body:
 ```
 {
@@ -63,6 +64,7 @@ digunakan untuk mengelola data produk. Operasi CRUD (Create, Read, Update, Delet
 memungkinkan pengguna untuk menambahkan produk baru ke sistem
 - Method: POST
 - URL: http://127.0.0.1:8000/api/produk
+
 Example Request Body:
 ```
 {
