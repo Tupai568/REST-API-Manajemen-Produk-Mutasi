@@ -38,7 +38,7 @@ Authorization: Bearer your_token_here
 untuk melakukan autentikasi dan masuk ke dalam aplikasi dengan memberikan kredensial mereka. Setelah autentikasi berhasil, server akan merespons dengan objek pengguna dan token autentikasi.
 - Method: POST
 - URL: http://127.0.0.1:8000/api/login
-  
+
 Example Request Body:
 ```
 {
@@ -146,8 +146,82 @@ Example Request Body:
 }
 ```
 
+# ProdukLokasi
+digunakan untuk mencatat dan mengelola jumlah produk tertentu yang disimpan di lokasi tertentu dan dilindungi oleh otentikasi token.
 
-### Cara Menjalankan
+### Lihat data ProdukLokasi
+- Method: GET
+- URL: http://127.0.0.1:8000/produk-lokasi
+
+### Lihat data ProdukLokasi dengan ID
+- Method: GET
+- URL: http://127.0.0.1:8000/api/produk-lokasi{id}
+
+### Tanbah data ProdukLokasi
+memungkinkan pengguna untuk menambahkan Data baru ke sistem
+- Method: POST
+- URL: http://127.0.0.1:8000/api/produk-lokasi
+
+Example Request Body:
+```
+{
+  "produk_id": 3,
+  "lokasi_id": 7,
+  "stok": 50
+}
+```
+
+### Update data ProdukLokasi
+memungkinkan pengguna untuk mengupdate data
+- Method: PUT
+- URL: http://127.0.0.1:8000/api/lokasi{id}
+
+Example Request Body:
+```
+{
+  "stok": 50
+}
+```
+
+# Mutasi
+digunakan untuk mengambil data mutasi yang ada, termasuk detail tentang lokasi pengguna dan produk yang terkait dengan setiap mutasi..
+
+### Lihat data ProdukLokasi
+- Method: GET
+- URL: http://127.0.0.1:8000/produk-lokasi
+
+### Lihat data ProdukLokasi dengan ID
+- Method: GET
+- URL: http://127.0.0.1:8000/api/produk-lokasi{id}
+
+### Tanbah data ProdukLokasi
+memungkinkan pengguna untuk menambahkan Data baru ke sistem
+- Method: POST
+- URL: http://127.0.0.1:8000/api/produk-lokasi
+
+Example Request Body:
+```
+{
+  "produk_id": 3,
+  "lokasi_id": 7,
+  "stok": 50
+}
+```
+
+### Update data ProdukLokasi
+memungkinkan pengguna untuk mengupdate data
+- Method: PUT
+- URL: http://127.0.0.1:8000/api/lokasi{id}
+
+Example Request Body:
+```
+{
+  "stok": 50
+}
+```
+
+
+# Cara Menjalankan
 
 1. Clone Repositori
 
