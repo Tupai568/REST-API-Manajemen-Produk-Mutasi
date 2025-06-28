@@ -56,7 +56,7 @@ digunakan untuk mengelola data produk. Operasi CRUD (Create, Read, Update, Delet
 - Method: GET
 - URL: http://127.0.0.1:8000/api/produk
 
-### Lihat Produk Sesuai Id
+#### Lihat Produk Sesuai Id
 - Method: GET
 - URL: http://127.0.0.1:8000/api/produk/{id}
 
@@ -109,6 +109,42 @@ Example Request Body:
 memungkinkan pengguna untuk menghapus produk
 - Method: DELETE
 - URL: http://127.0.0.1:8000/api/produk/{id}
+
+# Lokasi
+digunakan untuk mengelola data lokasi penyimpanan produk seperti gudang, rak, atau tempat distribusi lain dan dilindungi oleh otentikasi token.
+
+#### Lihat data lokasi
+- Method: GET
+- URL: http://127.0.0.1:8000/api/lokasi
+
+#### Lihat data lokasi dengan ID
+- Method: GET
+- URL: http://127.0.0.1:8000/api/lokasi{id}
+
+#### Tanbah data lokasi
+memungkinkan pengguna untuk menambahkan lokasi baru ke sistem
+- Method: POST
+- URL: http://127.0.0.1:8000/api/lokasi
+
+Example Request Body:
+```
+{
+  "kode_lokasi": "RK02",
+  "nama_lokasi": "RAK LANTAI 1"
+}
+```
+#### Update data lokasi
+memungkinkan pengguna untuk mengupdate lokasi
+- Method: PUT
+- URL: http://127.0.0.1:8000/api/lokasi{id}
+
+Example Request Body:
+```
+{
+  "kode_lokasi": "RK03",
+  "nama_lokasi": "RAK LANTAI 3"
+}
+```
 
 
 ### Cara Menjalankan
