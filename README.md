@@ -1,25 +1,26 @@
 # REST API Manajemen Produk & Mutasi
 
-Aplikasi berbasis Laravel 11 untuk manajemen produk, lokasi penyimpanan, dan mutasi stok barang. Didesain untuk integrasi mudah dengan sistem frontend atau mobile melalui RESTful API. Dilengkapi dokumentasi Postman dan siap dijalankan dengan Docker.
+REST API ini dirancang untuk menjadi antarmuka backend dari sistem Manajemen Produk & Mutasi Barang. API ini menyediakan berbagai endpoint yang memungkinkan pengguna untuk melakukan operasi CRUD (Create, Read, Update, Delete) terhadap entitas utama seperti User, Produk, Lokasi, dan Mutasi.
 
-#### Fitur Unggulan
+#### Tujuan API
 
--   Autentikasi API dengan Laravel Sanctum
--   CRUD: Produk, Lokasi, Produk-Lokasi, Mutasi
--   Validasi dan penanganan error terstruktur (helper ApiResponse)
--   Dokumentasi interaktif via Postman
--   Dukungan Docker untuk kemudahan deployment
+- Memungkinkan integrasi sistem dengan frontend atau aplikasi pihak ketiga.
+- Menyediakan mekanisme otentikasi dan otorisasi menggunakan token (via Laravel Sanctum).
+- Menyediakan endpoint yang dapat digunakan untuk mengelola data produk, lokasi penyimpanan, dan pencatatan mutasi barang masuk dan keluar.
 
-### Struktur Modul
 
--   Produk Informasi produk seperti nama, kode, kategori, satuan
--   Lokasi Lokasi penyimpanan produk seperti gudang atau cabang
--   ProdukLokasi Relasi banyak-ke-banyak antara produk dan lokasi
--   Mutasi Pergerakan stok masuk dan keluar antar lokasi
+### Teknologi yang Digunakan
+
+- Laravel 11 sebagai kerangka kerja utama backend
+- Laravel Sanctum untuk otentikasi token
+- MySQL untuk penyimpanan data
+- Postman untuk pengujian dan dokumentasi endpoint
+- JSON sebagai format data komunikasi
+
 
 ### Autentikasi
 
-Gunakan endpoint login untuk memperoleh token:
+semua endpoint dilindungi dan hanya dapat diakses setelah proses login berhasil. Setelah login, sistem akan memberikan
 
 ```
 POST /api/login
@@ -28,8 +29,29 @@ POST /api/login
 Kemudian, gunakan token sebagai Bearer Token:
 
 ```
+Content-Type: application/json
 Authorization: Bearer your_token_here
 ```
+
+# Produk
+
+digunakan untuk mengelola data produk. Operasi CRUD (Create, Read, Update, Delete) tersedia sepenuhnya dan dilindungi oleh otentikasi token.
+
+###### http://127.0.0.1:8000/api/produk
+memungkinkan pengguna untuk menambahkan produk baru ke sistem
+Method: POST
+URL: http://127.0.0.1:8000/api/produk
+Example Request Body:
+```
+{
+  "nama_produk": "Ayam Super mangon",
+  "kode_produk": "aym1",
+  "kategori": "Peternakan",
+  "satuan": "ekor"
+}
+```
+
+
 
 ### Cara Menjalankan
 
