@@ -247,7 +247,7 @@ Example Request Body:
 1. Clone Repositori
 
 ```
-git clone https://github.com/username/nama-proyek.git
+git clone https://github.com/Tupai568/REST-API-Manajemen-Produk-Mutasi.git
 ```
 
 ```
