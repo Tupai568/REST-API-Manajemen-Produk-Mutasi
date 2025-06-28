@@ -303,5 +303,3 @@ docker-compose up -d
 
 ISMAIL
 
-📄 Lisensi
-Proyek ini dilisensikan di bawah MIT License
